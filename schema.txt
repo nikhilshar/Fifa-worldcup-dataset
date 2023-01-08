@@ -10,12 +10,19 @@ MATCHES
        'away_team_score_penalties', 'result', 'home_team_win', 'away_team_win',
        'draw']
        
-GOAL
+GOALS
+['key_id', 'goal_id', 'tournament_id', 'tournament_name', 'match_id',
+       'match_name', 'match_date', 'stage_name', 'group_name', 'team_id',
+       'team_name', 'team_code', 'home_team', 'away_team', 'player_id',
+       'family_name', 'given_name', 'shirt_number', 'player_team_id',
+       'player_team_name', 'player_team_code', 'minute_label',
+       'minute_regulation', 'minute_stoppage', 'match_period', 'own_goal',
+       'penalty']
+PLAYERS
 ['key_id', 'player_id', 'family_name', 'given_name', 'birth_date',
        'goal_keeper', 'defender', 'midfielder', 'forward', 'count_tournaments',
        'list_tournaments', 'player_wikipedia_link']
-       
-STADIUM
+STADIUMS
 ['key_id', 'stadium_id', 'stadium_name', 'city_name', 'country_name',
        'stadium_capacity', 'stadium_wikipedia_link', 'city_wikipedia_link']
        
@@ -24,16 +31,109 @@ TEAMS
        'region_name', 'confederation_id', 'confederation_name',
        'confederation_code', 'team_wikipedia_link',
        'federation_wikipedia_link']
-       
 TOURNAMENTS
 ['key_id', 'tournament_id', 'tournament_name', 'year', 'start_date',
        'end_date', 'host_country', 'winner', 'host_won', 'count_teams',
        'group_stage', 'second_group_stage', 'final_round', 'round_of_16',
        'quarter_finals', 'semi_finals', 'third_place_match', 'final']
-
 PENALTY KICKS
 ['key_id', 'penalty_kick_id', 'tournament_id', 'tournament_name',
        'match_id', 'match_name', 'match_date', 'stage_name', 'group_name',
        'team_id', 'team_name', 'team_code', 'home_team', 'away_team',
        'player_id', 'family_name', 'given_name', 'shirt_number', 'converted']
        
+       
+===============================================================================================================================
+Common column name in the schema. Ids can be used for joining multiple tables.
+
+TABLE A         TABLE B
+Goals --------- Matches 
+
+tournament_id
+tournament_name
+match_id
+match_name
+match_date
+stage_name
+group_name
+
+ Goals --------- Players 
+
+player_id
+family_name
+given_name
+
+
+ Goals --------- Teams 
+
+team_id
+team_name
+team_code
+
+ Goals --------- Tournaments 
+
+tournament_id
+tournament_name
+
+ Goals --------- Penalty kicks 
+
+tournament_id
+tournament_name
+match_id
+match_name
+match_date
+stage_name
+group_name
+team_id
+team_name
+team_code
+home_team
+away_team
+player_id
+family_name
+given_name
+shirt_number
+
+
+ Matches --------- Stadiums 
+
+stadium_id
+stadium_name
+city_name
+country_name
+
+
+ Matches --------- Tournaments 
+
+tournament_id
+tournament_name
+group_stage
+
+ Matches --------- Penalty kicks 
+
+tournament_id
+tournament_name
+match_id
+match_name
+stage_name
+group_name
+match_date
+
+
+ Players --------- Penalty kicks 
+
+player_id
+family_name
+given_name
+
+
+ Teams --------- Penalty kicks 
+
+team_id
+team_name
+team_code
+
+ Tournaments --------- Penalty kicks 
+
+tournament_id
+tournament_name
