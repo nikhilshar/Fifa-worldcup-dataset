@@ -1,0 +1,39 @@
+MATCHES
+['key_id', 'tournament_id', 'tournament_name', 'match_id', 'match_name',
+       'stage_name', 'group_name', 'group_stage', 'knockout_stage', 'replayed',
+       'replay', 'match_date', 'match_time', 'stadium_id', 'stadium_name',
+       'city_name', 'country_name', 'home_team_id', 'home_team_name',
+       'home_team_code', 'away_team_id', 'away_team_name', 'away_team_code',
+       'score', 'home_team_score', 'away_team_score', 'home_team_score_margin',
+       'away_team_score_margin', 'extra_time', 'penalty_shootout',
+       'score_penalties', 'home_team_score_penalties',
+       'away_team_score_penalties', 'result', 'home_team_win', 'away_team_win',
+       'draw']
+       
+GOAL
+['key_id', 'player_id', 'family_name', 'given_name', 'birth_date',
+       'goal_keeper', 'defender', 'midfielder', 'forward', 'count_tournaments',
+       'list_tournaments', 'player_wikipedia_link']
+       
+STADIUM
+['key_id', 'stadium_id', 'stadium_name', 'city_name', 'country_name',
+       'stadium_capacity', 'stadium_wikipedia_link', 'city_wikipedia_link']
+       
+TEAMS
+['key_id', 'team_id', 'team_name', 'team_code', 'federation_name',
+       'region_name', 'confederation_id', 'confederation_name',
+       'confederation_code', 'team_wikipedia_link',
+       'federation_wikipedia_link']
+       
+TOURNAMENTS
+['key_id', 'tournament_id', 'tournament_name', 'year', 'start_date',
+       'end_date', 'host_country', 'winner', 'host_won', 'count_teams',
+       'group_stage', 'second_group_stage', 'final_round', 'round_of_16',
+       'quarter_finals', 'semi_finals', 'third_place_match', 'final']
+
+PENALTY KICKS
+['key_id', 'penalty_kick_id', 'tournament_id', 'tournament_name',
+       'match_id', 'match_name', 'match_date', 'stage_name', 'group_name',
+       'team_id', 'team_name', 'team_code', 'home_team', 'away_team',
+       'player_id', 'family_name', 'given_name', 'shirt_number', 'converted']
+       
